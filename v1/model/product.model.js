@@ -17,13 +17,16 @@ const schema = new mongoose.Schema({
     },
     sku: {
         type: String,
-        required: true
     },
     reviewCount: {
         type: Number,
         default: 0
     },
     price: {
+        type: Number,
+        default: 0
+    },
+    orginalPrice: {
         type: Number,
         default: 0
     },

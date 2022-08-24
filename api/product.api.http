@@ -2,11 +2,12 @@ post {{hostname}}{{v1}}{{product}}/add
 Content-Type: application/json
 
 {
-    "name": "name",
-    "type": "featuredProduct",
-    "sku": "sku",
-    "reviewCount": 0,
-    "price": 0,
-    "star": 0,
-    "picture": "picture"
+    "name": "Brandix Manual Five Speed Gearbox",
+    "type": "bestSeller",
+    "sku": "",
+    "reviewCount": 6,
+    "price": 879,
+    "originalPrice": 0,
+    "star": 4,
+    "picture": "\\uitoux\\product-9.jpg"
 }

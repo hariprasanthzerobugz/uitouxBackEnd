@@ -10,7 +10,6 @@ router.post('/add', parallelValidate([
     body('name', 'name is required').notEmpty(),
     body('type', 'type is required').notEmpty(),
     body('type').isIn(productTypes).withMessage('Invalid exam type'),
-    body('sku', 'sku is required').notEmpty(),
     body('reviewCount', 'reviewCount is required').notEmpty(),
     body('price', 'price is required').notEmpty(),
     body('star', 'star is required').notEmpty(),
