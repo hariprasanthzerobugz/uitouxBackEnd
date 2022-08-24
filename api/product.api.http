@@ -1,0 +1,12 @@
+post {{hostname}}{{v1}}{{product}}/add
+Content-Type: application/json
+
+{
+    "name": "name",
+    "type": "featuredProduct",
+    "sku": "sku",
+    "reviewCount": 0,
+    "price": 0,
+    "star": 0,
+    "picture": "picture"
+}

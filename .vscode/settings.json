@@ -1,0 +1,11 @@
+{
+    "rest-client.environmentVariables": {
+        "Local Env": {
+            "hostname": "http://localhost:8888",
+        },
+        "$shared": {
+            "v1": "/v1",
+            "product": "/product",
+        }
+    }
+}

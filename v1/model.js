@@ -1,0 +1,1 @@
+require('./model/product.model')
