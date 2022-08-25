@@ -3,7 +3,7 @@ const { body } = require('express-validator');
 const { response } = require('../functions/response/reposne');
 const { parallelValidate } = require('../functions/validators/validators');
 const { productTypes } = require('../functions/variables/variables');
-const { add } = require('./product.service');
+const { add, list } = require('./product.service');
 const router = express.Router();
 
 router.post('/add', parallelValidate([
@@ -17,6 +17,14 @@ router.post('/add', parallelValidate([
 ]), async (req, res) => {
     add(req).then(({statusCode, status, message, data = null}) =>
         response(res, statusCode, status, message, data) )
+})
+
+router.post('/list', parallelValidate([
+    body('type', 'type is required').notEmpty(),
+    body('type').isIn(productTypes).withMessage('Invalid exam type'),
+]), async (req, res) => {
+    list(req).then(({statusCode, status, message, data = null}) =>
+    response(res, statusCode, status, message, data) )
 })
 
  

@@ -1,5 +1,4 @@
 const { catchError, responseObject } = require("../functions/response/reposne")
-
 const productSchema = mongoose.model('product')
 
 const add = async ({body = {}}) => {
@@ -12,7 +11,9 @@ const add = async ({body = {}}) => {
 
 const list = async ({body = {}}) => {
     const {type} = body
-
+    const listData = await productSchema.find({type, isDeleted: 0}).catch(err => catchError(err))
+    if(!listData.length) return await responseObject(200, false, type+'Product Not Found')
+    if(listData.length) return await responseObject(200, true, type+'Product', listData)
 }
 
 module.exports = {

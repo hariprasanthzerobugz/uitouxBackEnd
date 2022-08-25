@@ -1,13 +1,21 @@
-post {{hostname}}{{v1}}{{product}}/add
+# post {{hostname}}{{v1}}{{product}}/add
+# Content-Type: application/json
+
+# {
+#     "name": "Brandix Manual Five Speed Gearbox",
+#     "type": "bestSeller",
+#     "sku": "",
+#     "reviewCount": 6,
+#     "price": 879,
+#     "originalPrice": 0,
+#     "star": 4,
+#     "picture": "\\uitoux\\product-9.jpg"
+# }
+
+# list
+post {{hostname}}{{v1}}{{product}}/list
 Content-Type: application/json
 
 {
-    "name": "Brandix Manual Five Speed Gearbox",
-    "type": "bestSeller",
-    "sku": "",
-    "reviewCount": 6,
-    "price": 879,
-    "originalPrice": 0,
-    "star": 4,
-    "picture": "\\uitoux\\product-9.jpg"
+    "type": "topRatedProduct"
 }
